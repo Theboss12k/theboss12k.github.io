@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ed">
+  <meta name="description" content="Paramesh Sriram, mechanical engineer and Parts Data Analyst at GE Vernova. Approach, robotics products, and autonomy research.">
+  <title>Paramesh Sriram · Engineering Portfolio</title>
+  <link rel="icon" href="mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="site.css">
+  <script src="site.js" defer></script>
+  <script type="module" src="cad/viewer.js"></script>
+</head>
+<body>
+  <dialog class="welcome" aria-labelledby="welcome-greeting">
+    <div class="welcome-content">
+      <div class="welcome-stage" role="img" aria-label="A tracked rover crawling across a platform, a tricopter banking overhead, and a robotic arm lifting a workpiece">
+        <div class="welcome-still" aria-hidden="true">
+          <img class="still-rover" src="cad/crawler.png" alt="" width="960" height="590">
+          <img class="still-aircraft" src="cad/tricopter.png" alt="" width="960" height="590">
+          <svg class="still-arm" viewBox="0 0 440 420"><use href="#arm-mechanism"/></svg>
+        </div>
+        <canvas aria-hidden="true"></canvas>
+      </div>
+      <h2 class="welcome-greeting" id="welcome-greeting"><span>Hello.</span><br>I’m Paramesh.</h2>
+      <button class="welcome-enter" type="button" data-enter>Step inside <span aria-hidden="true">↗</span></button>
+    </div>
+  </dialog>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#intro">Paramesh <span>Sriram</span></a>
+      <nav class="nav" aria-label="Page sections">
+        <a href="#approach">Approach</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+    <div class="reading-progress" aria-hidden="true"></div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero wrap" id="intro" aria-labelledby="headline">
+      <div class="hero-copy">
+        <p class="eyebrow hero-kicker">Mechanical engineering · Data analysis · Robotics</p>
+        <h1 id="headline"><span class="hero-line"><span>Goal first.</span></span><span class="hero-line secondary-line"><span>AI as an enabler.</span></span></h1>
+        <p class="hero-bio">I’m Paramesh, a mechanical engineer and Parts Data Analyst at GE Vernova. I build tools for robotics and autonomy with the operator and the physical system in mind.</p>
+        <div class="actions">
+          <a class="button" href="#approach">How I work <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#work">See the demos <span aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+      <figure class="cad-figure crawler-figure">
+        <div class="cad-viewport" data-cad="crawler" data-arrival="crawler-arrival" role="img" aria-label="Worm Crawler Rev B, a CAD assembly of a tracked rover that drives as you scroll">
+          <div class="cad-traveller">
+            <img src="cad/crawler.png" alt="" width="960" height="590">
+            <canvas aria-hidden="true"></canvas>
+          </div>
+          <span class="cad-mark" aria-hidden="true">01 / GROUND</span>
+        </div>
+        <figcaption><strong>Worm Crawler</strong><span>Rev B · CAD by Paramesh Sriram</span></figcaption>
+      </figure>
+    </section>
+
+    <section class="section aircraft" id="tritilt" aria-labelledby="tritilt-title">
+      <div class="wrap cad-handoff" id="crawler-arrival" aria-hidden="true"></div>
+      <div class="wrap aircraft-layout" data-scroll-stage>
+        <div class="aircraft-copy" data-flow>
+          <p class="eyebrow section-index">02 / Flight</p>
+          <h2 id="tritilt-title">TriTilt VTOL</h2>
+          <p>My three-rotor VTOL design. Scroll to lift off, tilt the propellers, and transition to fixed-wing flight.</p>
+        </div>
+        <figure class="cad-figure">
+          <div class="cad-viewport" data-cad="tricopter" data-arrival="tricopter-arrival" role="img" aria-label="TriTilt Rev A takes off and tilts its three propellers into fixed-wing flight as you scroll">
+            <div class="cad-traveller">
+              <img src="cad/tricopter.png" alt="" width="960" height="590" loading="lazy">
+              <canvas aria-hidden="true"></canvas>
+            </div>
+            <span class="cad-mark" data-flight-mode aria-hidden="true">02 / HOVER</span>
+          </div>
+          <figcaption><strong>TriTilt VTOL</strong><span>Rev A · CAD by Paramesh Sriram</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section approach" id="approach" aria-labelledby="approach-title">
+      <div class="wrap cad-handoff" id="tricopter-arrival" aria-hidden="true"></div>
+      <div class="wrap approach-layout" data-scroll-stage>
+        <div class="approach-intro" data-flow>
+          <p class="eyebrow section-index">01 / Approach</p>
+          <h2 id="approach-title">How I work</h2>
+          <p>Mechanical engineering taught me to ask what can move, what can fail, and what needs a margin. I carry those questions into software and data work.</p>
+        </div>
+        <div class="principles" data-flow="detail">
+          <details name="principles" open>
+            <summary><span class="principle-index">01</span><span>Define the outcome</span><span class="disclosure" aria-hidden="true"></span></summary>
+            <div class="principle-copy"><p>Identify who needs the result and what decision it should help them make. Set a way to measure success before choosing the tool.</p></div>
+          </details>
+          <details name="principles">
+            <summary><span class="principle-index">02</span><span>Model the constraints</span><span class="disclosure" aria-hidden="true"></span></summary>
+            <div class="principle-copy"><p>Translate loads, clearances, tolerances, and motion limits into requirements. A software design is only useful if the physical system can act on it.</p></div>
+          </details>
+          <details name="principles">
+            <summary><span class="principle-index">03</span><span>Use AI where it helps</span><span class="disclosure" aria-hidden="true"></span></summary>
+            <div class="principle-copy"><p>Use AI for bounded tasks such as drafting or comparing options. Give it a clear input, a well-defined output, and a way to catch errors.</p></div>
+          </details>
+          <details name="principles">
+            <summary><span class="principle-index">04</span><span>Test the failure cases</span><span class="disclosure" aria-hidden="true"></span></summary>
+            <div class="principle-copy"><p>Check what happens when inputs are noisy, assumptions break, or a component reaches its limit. Use the results to decide what needs to change.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section work" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="section-heading" data-scroll-stage>
+          <p class="eyebrow section-index" data-flow>02 / Selected work</p>
+          <h2 id="work-title" data-flow>Products &amp; research</h2>
+          <p data-flow>See the fleet planner, the robotics workspace, and the trajectory research in action.</p>
+        </div>
+
+        <article class="project" aria-labelledby="ryntara-title" data-scroll-stage>
+          <div class="project-copy" data-flow>
+            <p class="eyebrow">01 / Fleet coordination</p>
+            <h3 id="ryntara-title">RYNTARA</h3>
+            <p>One map for drone and rover telemetry. Operators can check proposed routes against restricted areas and other traffic before approving them.</p>
+            <div class="project-links">
+              <a class="text-link" href="https://github.com/Theboss12k/RYNTARA" aria-label="RYNTARA source code">Source <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://theboss12k.github.io/RYNTARA/" aria-label="RYNTARA walkthrough">Walkthrough <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <figure class="demo" data-flow="detail">
+            <div class="player"><video controls muted playsinline preload="none" poster="media/ryntara.jpg" aria-label="RYNTARA route planner demo"><source src="media/ryntara.mp4" type="video/mp4"></video></div>
+            <figcaption>The planner flags a route through a restricted area and proposes an alternate path.</figcaption>
+          </figure>
+        </article>
+
+        <article class="project" aria-labelledby="robode-title" data-scroll-stage>
+          <div class="project-copy" data-flow>
+            <p class="eyebrow">02 / Robotics workspace</p>
+            <h3 id="robode-title">RoboDE</h3>
+            <p>A robotics IDE for configuring robots, building scenes, and running task plans. The demo follows a plan as it runs in Isaac Sim.</p>
+            <div class="project-links">
+              <a class="text-link" href="https://github.com/Theboss12k/RoboDE" aria-label="RoboDE source code">Source <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://theboss12k.github.io/RoboDE/" aria-label="RoboDE walkthrough">Walkthrough <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <figure class="demo" data-flow="detail">
+            <div class="player"><video controls muted playsinline preload="none" poster="media/robode.jpg" aria-label="RoboDE task execution demo"><source src="media/robode.mp4" type="video/mp4"></video></div>
+            <figcaption>RoboDE shows execution feedback as a task plan runs in Isaac Sim.</figcaption>
+          </figure>
+        </article>
+
+        <article class="project" aria-labelledby="phase-title" data-scroll-stage>
+          <div class="project-copy" data-flow>
+            <p class="eyebrow">03 / Multi-agent research</p>
+            <h3 id="phase-title">PHASE</h3>
+            <p>Physics-based Hierarchical Adaptive Spatial Evasion studies how multiple vehicles can coordinate their paths. It combines local A* planning with conflict detection and priority-weighted evasion.</p>
+            <div class="project-links">
+              <a class="text-link" href="https://github.com/Theboss12k/Autonomous_Algorithms" aria-label="PHASE source code">Source <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://theboss12k.github.io/RYNTARA/#phase" aria-label="PHASE research walkthrough">Walkthrough <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <figure class="demo" data-flow="detail">
+            <div class="player"><video controls muted playsinline preload="none" poster="media/phase.jpg" aria-label="PHASE multi-agent simulation demo"><source src="media/phase.mp4" type="video/mp4"></video></div>
+            <figcaption>Nineteen simulated vehicles navigate around five obstacles toward their own goals.</figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="wrap about-layout" data-scroll-stage>
+        <div class="about-intro" data-flow>
+          <p class="eyebrow section-index">03 / About</p>
+          <h2 id="about-title">About me</h2>
+          <p>I earned my BTech in Mechanical Engineering from Amrita Vishwa Vidyapeetham. During my internship at AEREO, I analyzed UAV wing substructures, including honeycomb and sandwich designs.</p>
+        </div>
+        <img class="about-photo" data-flow="detail" src="images/paramesh-motorcycle.jpg" alt="Paramesh Sriram standing beside a motorcycle at the beach" width="960" height="1280" loading="lazy" decoding="async">
+        <div class="about-details" data-flow>
+          <section class="employer" aria-labelledby="employer-title">
+            <img class="employer-logo" src="images/ge-vernova.svg" alt="GE Vernova" width="227" height="50" loading="lazy">
+            <h3 id="employer-title">Parts Data Analyst</h3>
+            <p class="employer-dates">GE Vernova · July 2025–present</p>
+            <p>I work on data, software, and automation for engineering and business processes. I joined GE Vernova as an EEDP intern in January 2025.</p>
+            <p>GE Vernova is a global energy company with businesses in power, wind, and electrification.</p>
+            <a class="text-link" href="https://www.gevernova.com/company/about">About GE Vernova <span aria-hidden="true">↗</span></a>
+          </section>
+
+          <div class="outside">
+            <h3>Outside work</h3>
+            <p>I enjoy volunteering with pets and going for motorcycle rides.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-layout" data-scroll-stage>
+        <div data-flow>
+          <p class="eyebrow section-index">04 / Contact</p>
+          <h2 id="contact-title">Let’s connect.</h2>
+          <p>I’d be glad to talk about robotics, autonomy, or engineering tools.</p>
+          <a class="text-link contact-email" href="mailto:parameshsriram2020@gmail.com">parameshsriram2020@gmail.com</a>
+          <div class="actions"><a class="button" href="https://www.linkedin.com/in/paramesh-sriram-17121a230/">LinkedIn <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/Theboss12k">GitHub <span aria-hidden="true">↗</span></a></div>
+        </div>
+      <figure class="arm-figure">
+        <svg class="arm-render" viewBox="0 0 440 420" role="img" aria-labelledby="arm-title">
+          <title id="arm-title">An articulated robotic arm with a machined base, rotating joints, and a two-finger gripper</title>
+          <defs>
+            <linearGradient id="arm-housing" x2=".22" y2="1" gradientUnits="objectBoundingBox">
+              <stop stop-color="#a9b5c6"/><stop offset=".32" stop-color="#6d7c92"/><stop offset=".75" stop-color="#344157"/><stop offset="1" stop-color="#202c40"/>
+            </linearGradient>
+            <linearGradient id="arm-edge" x2="0" y2="1" gradientUnits="objectBoundingBox">
+              <stop stop-color="#5d6f86"/><stop offset="1" stop-color="#202a3c"/>
+            </linearGradient>
+            <linearGradient id="arm-metal" x2=".24" y2="1" gradientUnits="objectBoundingBox">
+              <stop stop-color="#eef2f4"/><stop offset=".38" stop-color="#bcc8d3"/><stop offset=".72" stop-color="#8596aa"/><stop offset="1" stop-color="#53657c"/>
+            </linearGradient>
+            <linearGradient id="arm-brass" x2=".24" y2="1" gradientUnits="objectBoundingBox">
+              <stop stop-color="#edc978"/><stop offset=".47" stop-color="#c39a4c"/><stop offset="1" stop-color="#775426"/>
+            </linearGradient>
+            <radialGradient id="arm-shadow">
+              <stop stop-color="#24314c" stop-opacity=".26"/><stop offset="1" stop-color="#24314c" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="arm-light">
+              <stop stop-color="#dfe5f3"/><stop offset="1" stop-color="#f5f3ed" stop-opacity="0"/>
+            </radialGradient>
+            <pattern id="arm-grid" width="22" height="22" patternUnits="userSpaceOnUse">
+              <path d="M22 0H0v22" fill="none" stroke="#596c92" stroke-opacity=".13"/>
+            </pattern>
+            <g id="arm-bolt">
+              <circle r="3.4" fill="#324157" stroke="#b6c0cd" stroke-width=".8"/>
+              <path d="M-1.4 0h2.8" stroke="#cad3de" stroke-width=".75"/>
+            </g>
+            <g id="arm-hub">
+              <circle cx="7" cy="5" r="25" fill="url(#arm-edge)" stroke="#26344b"/>
+              <circle r="25" fill="url(#arm-metal)" stroke="#405067" stroke-width="1.1"/>
+              <circle r="18.8" fill="url(#arm-brass)" stroke="#5d462c" stroke-width="1.2"/>
+              <circle r="14.3" fill="none" stroke="#f5dc9e" stroke-opacity=".67" stroke-dasharray="3 2.5" stroke-width="2.4"/>
+              <circle r="8" fill="#29374b" stroke="#6a5634"/>
+              <path d="M-3.1-5.2h6.2l3.1 5.2-3.1 5.2h-6.2L-6.2 0Z" fill="url(#arm-metal)" stroke="#1d2a3f"/>
+              <use href="#arm-bolt" y="-21"/><use href="#arm-bolt" y="21"/>
+              <use href="#arm-bolt" x="-21"/><use href="#arm-bolt" x="21"/>
+            </g>
+          </defs>
+          <g class="arm-backdrop">
+          <ellipse cx="219" cy="219" rx="216" ry="202" fill="url(#arm-light)"/>
+          <path d="M20 75V23h52m296 0h52v52M20 344v52h52m296 0h52v-52" fill="none" stroke="#8e9cb4" stroke-opacity=".65"/>
+          <rect x="20" y="23" width="400" height="373" fill="url(#arm-grid)"/>
+          <path d="M90 363h311m-289 10h267m-241 10h216M132 384l55-45m17 46 29-47m46 47-6-48m70 48-37-46" fill="none" stroke="#70809c" stroke-opacity=".25"/>
+          <ellipse cx="251" cy="366" rx="142" ry="29" fill="url(#arm-shadow)"/>
+          </g>
+          <g id="arm-mechanism">
+            <path d="M152 346v14q0 13 99 14t99-14v-14" fill="url(#arm-edge)" stroke="#233247"/>
+            <ellipse cx="251" cy="346" rx="99" ry="14" fill="url(#arm-metal)" stroke="#485a72"/>
+            <ellipse cx="251" cy="345" rx="76" ry="10" fill="#5f7088" stroke="#d2dbe5" stroke-opacity=".65"/>
+            <path d="M198 343l12-42 36-12 45 13 12 41q-51 17-105 0Z" fill="url(#arm-housing)" stroke="#374960"/>
+            <path d="M208 332l10-23 27-9 27 9 9 23-15 9h-40Z" fill="#26344b" stroke="#8291a7"/>
+            <path d="M284 306l7-4 12 41-22 7-5-14Z" fill="#253348"/>
+            <use href="#arm-bolt" x="173" y="346"/><use href="#arm-bolt" x="325" y="346"/>
+            <ellipse cx="110" cy="355" rx="18" ry="4" fill="#506981" opacity=".25"/>
+            <g data-arm-cargo transform="translate(110 346)">
+              <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#66c8da" stroke="#367b8a"/>
+              <path d="M-5-4h10" stroke="#d6f7ff"/>
+            </g>
+            <g transform="translate(244 318)">
+              <g data-arm-shoulder transform="rotate(-60)">
+                <path d="M-7-24 106-17q22-3 25 18l-5 15-14 9-116 8q-14 0-20-15Z" fill="url(#arm-edge)" stroke="#233247"/>
+                <path d="M0-25 112-18q19-1 20 17t-20 18L0 24q-23 0-23-24T0-25Z" fill="url(#arm-housing)" stroke="#394960"/>
+                <path d="M13-17 105-12l9 10-11 10-90 7Z" fill="url(#arm-metal)" stroke="#b7c4d3" stroke-opacity=".65"/>
+                <path d="M31-9 92-6l6 5-8 4-59 4-8-8Z" fill="#354760" stroke="#7c90aa"/>
+                <path d="M31-2h57" stroke="#b1c2d6" stroke-opacity=".52"/>
+                <use href="#arm-bolt" x="43" y="12"/><use href="#arm-bolt" x="78" y="10"/>
+                <g transform="translate(125 0)">
+                  <g data-arm-elbow transform="rotate(-59)">
+                    <path d="M-6-19 79-12l21 8 1 18-15 11-92 1-14-12Z" fill="url(#arm-edge)" stroke="#263549"/>
+                    <path d="M0-20 82-15l15 8v14l-16 9L0 20q-18-2-18-20t18-20Z" fill="url(#arm-metal)" stroke="#40516b"/>
+                    <path d="M18-11l54 2 11 8-10 8-55 3Z" fill="#485970" stroke="#d4dee8" stroke-opacity=".65"/>
+                    <path d="M26-6h46M26-1h46M26 4h46" stroke="#8a9ab0" stroke-width=".8"/>
+                    <g transform="translate(95 0)">
+                      <g data-arm-wrist transform="rotate(86)">
+                        <path d="M0-12h28l9 7v15l-10 7H1Z" fill="url(#arm-edge)" stroke="#2f3d53"/>
+                        <path d="M0-13h27l8 6v11l-9 8H0Z" fill="url(#arm-housing)" stroke="#405069"/>
+                        <path d="M19-13h7v25h-7Z" fill="#a95848" stroke="#703e38"/>
+                        <g data-arm-finger="1">
+                          <path d="M32-8h15l13-8h12v7H60l-12 9H35Z" fill="url(#arm-metal)" stroke="#344259" stroke-linejoin="round"/>
+                          <path d="M65-9h7" stroke="#29374b" stroke-width="2"/>
+                        </g>
+                        <g data-arm-finger="-1">
+                          <path d="M35 0h13l12 9h12v7H60L47 8H32Z" fill="url(#arm-metal)" stroke="#344259" stroke-linejoin="round"/>
+                          <path d="M65 9h7" stroke="#29374b" stroke-width="2"/>
+                        </g>
+                        <circle r="12" fill="url(#arm-metal)" stroke="#475973"/>
+                        <use href="#arm-bolt"/>
+                      </g>
+                    </g>
+                  </g>
+                  <use href="#arm-hub" transform="scale(.86)"/>
+                </g>
+              </g>
+              <use href="#arm-hub"/>
+            </g>
+          </g>
+        </svg>
+        <figcaption><span>Robotic arm · Motion study</span><span>Illustration</span></figcaption>
+      </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer"><span>Paramesh Sriram</span><a class="text-link" href="#intro">Back to top <span aria-hidden="true">↑</span></a></footer>
+</body>
+</html>
