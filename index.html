@@ -32,7 +32,8 @@
       <a class="brand" href="#intro">Paramesh <span>Sriram</span></a>
       <nav class="nav" aria-label="Page sections">
         <a href="#approach">Approach</a>
-        <a href="#work">Work</a>
+        <a href="#applied-ai">Applied AI</a>
+        <a href="#work">Robotics</a>
         <a href="#about">About</a>
         <a href="#contact">Contact <span aria-hidden="true">↗</span></a>
       </nav>
@@ -46,17 +47,14 @@
         <p class="eyebrow hero-kicker">Applied AI · Robotics · Mechanical engineering</p>
         <h1 id="headline"><span class="hero-line"><span>Goal first.</span></span><span class="hero-line secondary-line"><span>AI as an enabler.</span></span></h1>
         <p class="hero-bio">I’m Paramesh, a mechanical engineer and Parts Data Analyst at GE Vernova. I build applied AI tools and robotic systems with the operator and the physical system in mind.</p>
-        <figure class="hero-workflow" aria-labelledby="workflow-title">
-          <figcaption id="workflow-title"><span>RoboDE</span> From instruction to simulation</figcaption>
-          <ol>
-            <li><strong>Draft tasks</strong><span>A language model turns an instruction into a plan.</span></li>
-            <li><strong>Check commands</strong><span>The compiler checks reach, joint limits, and collisions.</span></li>
-            <li><strong>Run in simulation</strong><span>Isaac Sim executes the validated plan.</span></li>
-          </ol>
-        </figure>
+        <div class="hero-impact">
+          <p class="eyebrow">Enterprise AI · GE Vernova</p>
+          <p class="impact-value"><span>Over 40 hours</span> <span>→</span> <strong>Under 4 hours</strong></p>
+          <p>Cycle time for an internal document workflow</p>
+        </div>
         <div class="actions">
-          <a class="button" href="#approach">How I work <span aria-hidden="true">↓</span></a>
-          <a class="text-link" href="#work">See the demos <span aria-hidden="true">↘</span></a>
+          <a class="button" href="#applied-ai">Applied AI <span aria-hidden="true">↓</span></a>
+          <a class="button button-outline" href="#work">Robotics <span aria-hidden="true">↓</span></a>
         </div>
       </div>
       <figure class="cad-figure crawler-figure">
@@ -121,56 +119,68 @@
       </div>
     </section>
 
+    <section class="section applied-ai" id="applied-ai" aria-labelledby="ai-title">
+      <div class="wrap">
+        <div class="ai-layout" data-scroll-stage>
+          <div class="ai-intro" data-flow>
+            <p class="eyebrow section-index">02 / Enterprise experience</p>
+            <h2 id="ai-title">Applied AI</h2>
+            <p>I designed and deployed an LLM workflow at GE Vernova that cut the cycle time of an internal document process from <strong>over 40 hours to under 4 hours</strong>. The workflow combined hybrid retrieval with automated processing across large document collections.</p>
+          </div>
+          <div class="principles ai-topics" role="group" aria-label="Explore applied AI methods" data-flow="detail">
+            <details name="ai-topics" open>
+              <summary><span class="principle-index" aria-hidden="true">01</span><span>LLMs</span><span class="disclosure" aria-hidden="true"></span></summary>
+              <div class="principle-copy"><p>I used large language models to process retrieved document content, then automated the formatting of the results and tracked input and output token usage.</p></div>
+            </details>
+            <details name="ai-topics">
+              <summary><span class="principle-index" aria-hidden="true">02</span><span>Hybrid RAG</span><span class="disclosure" aria-hidden="true"></span></summary>
+              <div class="principle-copy"><p>Retrieval-augmented generation gives a model relevant source material. I combined semantic search for passages with similar meaning and keyword search for exact matches.</p></div>
+            </details>
+            <details name="ai-topics">
+              <summary><span class="principle-index" aria-hidden="true">03</span><span>Embeddings &amp; Vector DBs</span><span class="disclosure" aria-hidden="true"></span></summary>
+              <div class="principle-copy"><p>I evaluated BERT-based embeddings for semantic retrieval. Embeddings represent text as vectors, which a vector database can index to find passages with similar meaning.</p></div>
+            </details>
+            <details name="ai-topics">
+              <summary><span class="principle-index" aria-hidden="true">04</span><span>Evaluation</span><span class="disclosure" aria-hidden="true"></span></summary>
+              <div class="principle-copy"><p>I compared whether models completed the task, returned valid outputs, and rejected invalid requests. I also tracked latency and weighed token usage, cost, and compute needs when selecting models.</p></div>
+            </details>
+          </div>
+        </div>
+
+        <div class="ai-evidence" data-scroll-stage>
+          <div data-flow>
+            <p class="eyebrow">Model evaluation</p>
+            <h3>Models I’ve evaluated</h3>
+            <ul class="model-list" role="list">
+              <li>gpt-oss</li>
+              <li>Claude</li>
+              <li>Llama 3.1</li>
+              <li>NVIDIA Nemotron</li>
+              <li>Phi-4</li>
+            </ul>
+          </div>
+          <div class="ai-benchmark" data-flow="detail">
+            <p class="eyebrow">Published benchmark · Nemotron</p>
+            <h3>9 of 12 cases passed</h3>
+            <p>Nemotron 3.5 Bolt had the highest pass count among four configurations tested on the same 12 cases. All four failed the adapter generation tests.</p>
+            <a class="text-link" href="https://theboss12k.github.io/RoboDE/#checks">See the evaluation results <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section work" id="work" aria-labelledby="work-title">
       <div class="wrap">
         <div class="section-heading" data-scroll-stage>
-          <p class="eyebrow section-index" data-flow>02 / Selected work</p>
-          <h2 id="work-title" data-flow>Products &amp; research</h2>
-          <p data-flow>From model-assisted planning and data integration to mechanical design and autonomous coordination.</p>
+          <p class="eyebrow section-index" data-flow>03 / Selected projects</p>
+          <h2 id="work-title" data-flow>Robotics &amp; Autonomy</h2>
+          <p data-flow>Fleet coordination, robot simulation, and trajectory planning.</p>
         </div>
-
-        <section class="work-group" aria-labelledby="ai-title">
-          <h3 class="work-group-title" id="ai-title">Applied AI</h3>
-          <div class="ai-cases">
-            <article class="ai-case" aria-labelledby="robode-ai-title" data-scroll-stage>
-              <div class="case-copy" data-flow>
-                <p class="eyebrow">RoboDE</p>
-                <h4 id="robode-ai-title">From instruction to task plan</h4>
-                <p>A planner model breaks an instruction into robot tasks. RoboDE converts those tasks into commands and validates the plan before execution in Isaac Sim.</p>
-                <div class="project-links">
-                  <a class="text-link" href="https://github.com/Theboss12k/RoboDE" aria-label="RoboDE source code">Source <span aria-hidden="true">↗</span></a>
-                  <a class="text-link" href="https://theboss12k.github.io/RoboDE/#pipeline" aria-label="RoboDE planning walkthrough">Walkthrough <span aria-hidden="true">↗</span></a>
-                </div>
-              </div>
-              <figure class="demo" data-flow="detail">
-                <div class="player"><video controls muted playsinline preload="none" poster="media/robode-plan.jpg" aria-label="RoboDE generates a structured task plan"><source src="media/robode-plan.mp4" type="video/mp4"></video></div>
-                <figcaption>A generated plan breaks a single instruction into nine tasks.</figcaption>
-              </figure>
-            </article>
-            <article class="ai-case" aria-labelledby="ryntara-ai-title" data-scroll-stage>
-              <div class="case-copy" data-flow>
-                <p class="eyebrow">RYNTARA</p>
-                <h4 id="ryntara-ai-title">From raw packets to fleet data</h4>
-                <p>A local Ollama model can draft a Python telemetry adapter. Adapter Studio runs the parser on UDP packets and checks each parsed line against the shared fleet schema.</p>
-                <div class="project-links">
-                  <a class="text-link" href="https://github.com/Theboss12k/RYNTARA" aria-label="RYNTARA source code">Source <span aria-hidden="true">↗</span></a>
-                  <a class="text-link" href="https://theboss12k.github.io/RYNTARA/#operate" aria-label="RYNTARA Adapter Studio walkthrough">Walkthrough <span aria-hidden="true">↗</span></a>
-                </div>
-              </div>
-              <figure class="demo" data-flow="detail">
-                <div class="player"><video controls muted playsinline preload="none" poster="media/ryntara-adapter.jpg" aria-label="RYNTARA captures UDP packets and validates parsed telemetry"><source src="media/ryntara-adapter.mp4" type="video/mp4"></video></div>
-                <figcaption>Adapter Studio captures packets and validates the parsed telemetry.</figcaption>
-              </figure>
-            </article>
-          </div>
-        </section>
-
-        <section class="work-group" aria-labelledby="robotics-title">
-          <h3 class="work-group-title" id="robotics-title">Robotics &amp; autonomy</h3>
+        <div class="work-projects" id="robotics-title">
           <article class="project" aria-labelledby="ryntara-title" data-scroll-stage>
             <div class="project-copy" data-flow>
               <p class="eyebrow">01 / Fleet coordination</p>
-              <h4 id="ryntara-title">RYNTARA</h4>
+              <h3 id="ryntara-title">RYNTARA</h3>
               <p>One map for drone and rover telemetry. Operators can check proposed routes against restricted areas and other traffic before approving them.</p>
               <div class="project-links">
                 <a class="text-link" href="https://github.com/Theboss12k/RYNTARA" aria-label="RYNTARA source code">Source <span aria-hidden="true">↗</span></a>
@@ -186,7 +196,7 @@
           <article class="project" aria-labelledby="robode-title" data-scroll-stage>
             <div class="project-copy" data-flow>
               <p class="eyebrow">02 / Robotics workspace</p>
-              <h4 id="robode-title">RoboDE</h4>
+              <h3 id="robode-title">RoboDE</h3>
               <p>A robotics IDE for configuring robots, building scenes, and running task plans. The demo follows a plan as it runs in Isaac Sim.</p>
               <div class="project-links">
                 <a class="text-link" href="https://github.com/Theboss12k/RoboDE" aria-label="RoboDE source code">Source <span aria-hidden="true">↗</span></a>
@@ -202,7 +212,7 @@
           <article class="project" aria-labelledby="phase-title" data-scroll-stage>
             <div class="project-copy" data-flow>
               <p class="eyebrow">03 / Trajectory-planning research</p>
-              <h4 id="phase-title">PHASE</h4>
+              <h3 id="phase-title">PHASE</h3>
               <p>Physics-based Hierarchical Adaptive Spatial Evasion studies how multiple vehicles can coordinate their paths. It combines local A* planning with conflict detection and priority-weighted evasion.</p>
               <div class="project-links">
                 <a class="text-link" href="https://github.com/Theboss12k/Autonomous_Algorithms" aria-label="PHASE source code">Source <span aria-hidden="true">↗</span></a>
@@ -214,14 +224,14 @@
               <figcaption>Nineteen simulated vehicles navigate around five obstacles toward their own goals.</figcaption>
             </figure>
           </article>
-        </section>
+        </div>
       </div>
     </section>
 
     <section class="section about" id="about" aria-labelledby="about-title">
       <div class="wrap about-layout" data-scroll-stage>
         <div class="about-intro" data-flow>
-          <p class="eyebrow section-index">03 / About</p>
+          <p class="eyebrow section-index">04 / About</p>
           <h2 id="about-title">About me</h2>
           <p>I earned my BTech in Mechanical Engineering from Amrita Vishwa Vidyapeetham. During my internship at AEREO, I analyzed UAV wing substructures, including honeycomb and sandwich designs.</p>
         </div>
@@ -249,7 +259,7 @@
     <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="wrap contact-layout" data-scroll-stage>
         <div data-flow>
-          <p class="eyebrow section-index">04 / Contact</p>
+          <p class="eyebrow section-index">05 / Contact</p>
           <h2 id="contact-title">Let’s connect.</h2>
           <p>I’d be glad to talk about applied AI, robotics, or engineering tools.</p>
           <a class="text-link contact-email" href="mailto:parameshsriram2020@gmail.com">parameshsriram2020@gmail.com</a>
