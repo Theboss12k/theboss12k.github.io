@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f3ed">
-  <meta name="description" content="Paramesh Sriram, mechanical engineer and Parts Data Analyst at GE Vernova. Approach, robotics products, and autonomy research.">
+  <meta name="description" content="Paramesh Sriram, mechanical engineer and Parts Data Analyst at GE Vernova. Applied AI, robotics, and autonomy projects.">
   <title>Paramesh Sriram · Engineering Portfolio</title>
   <link rel="icon" href="mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="site.css">
@@ -43,9 +43,17 @@
   <main id="main" tabindex="-1">
     <section class="hero wrap" id="intro" aria-labelledby="headline">
       <div class="hero-copy">
-        <p class="eyebrow hero-kicker">Mechanical engineering · Data analysis · Robotics</p>
+        <p class="eyebrow hero-kicker">Applied AI · Robotics · Mechanical engineering</p>
         <h1 id="headline"><span class="hero-line"><span>Goal first.</span></span><span class="hero-line secondary-line"><span>AI as an enabler.</span></span></h1>
-        <p class="hero-bio">I’m Paramesh, a mechanical engineer and Parts Data Analyst at GE Vernova. I build tools for robotics and autonomy with the operator and the physical system in mind.</p>
+        <p class="hero-bio">I’m Paramesh, a mechanical engineer and Parts Data Analyst at GE Vernova. I build applied AI tools and robotic systems with the operator and the physical system in mind.</p>
+        <figure class="hero-workflow" aria-labelledby="workflow-title">
+          <figcaption id="workflow-title"><span>RoboDE</span> From instruction to simulation</figcaption>
+          <ol>
+            <li><strong>Draft tasks</strong><span>A language model turns an instruction into a plan.</span></li>
+            <li><strong>Check commands</strong><span>The compiler checks reach, joint limits, and collisions.</span></li>
+            <li><strong>Run in simulation</strong><span>Isaac Sim executes the validated plan.</span></li>
+          </ol>
+        </figure>
         <div class="actions">
           <a class="button" href="#approach">How I work <span aria-hidden="true">↓</span></a>
           <a class="text-link" href="#work">See the demos <span aria-hidden="true">↘</span></a>
@@ -90,7 +98,7 @@
         <div class="approach-intro" data-flow>
           <p class="eyebrow section-index">01 / Approach</p>
           <h2 id="approach-title">How I work</h2>
-          <p>Mechanical engineering taught me to ask what can move, what can fail, and what needs a margin. I carry those questions into software and data work.</p>
+          <p>Mechanical engineering taught me to ask what can move, what can fail, and what needs a margin. I bring that mindset to robotics and applied AI, where a good result needs clear constraints and a way to check it.</p>
         </div>
         <div class="principles" data-flow="detail">
           <details name="principles" open>
@@ -99,7 +107,7 @@
           </details>
           <details name="principles">
             <summary><span class="principle-index">02</span><span>Model the constraints</span><span class="disclosure" aria-hidden="true"></span></summary>
-            <div class="principle-copy"><p>Translate loads, clearances, tolerances, and motion limits into requirements. A software design is only useful if the physical system can act on it.</p></div>
+            <div class="principle-copy"><p>Turn loads, clearances, tolerances, and motion limits into engineering requirements. For data and AI workflows, define the inputs, allowed outputs, and checks with the same care.</p></div>
           </details>
           <details name="principles">
             <summary><span class="principle-index">03</span><span>Use AI where it helps</span><span class="disclosure" aria-hidden="true"></span></summary>
@@ -118,56 +126,95 @@
         <div class="section-heading" data-scroll-stage>
           <p class="eyebrow section-index" data-flow>02 / Selected work</p>
           <h2 id="work-title" data-flow>Products &amp; research</h2>
-          <p data-flow>See the fleet planner, the robotics workspace, and the trajectory research in action.</p>
+          <p data-flow>From model-assisted planning and data integration to mechanical design and autonomous coordination.</p>
         </div>
 
-        <article class="project" aria-labelledby="ryntara-title" data-scroll-stage>
-          <div class="project-copy" data-flow>
-            <p class="eyebrow">01 / Fleet coordination</p>
-            <h3 id="ryntara-title">RYNTARA</h3>
-            <p>One map for drone and rover telemetry. Operators can check proposed routes against restricted areas and other traffic before approving them.</p>
-            <div class="project-links">
-              <a class="text-link" href="https://github.com/Theboss12k/RYNTARA" aria-label="RYNTARA source code">Source <span aria-hidden="true">↗</span></a>
-              <a class="text-link" href="https://theboss12k.github.io/RYNTARA/" aria-label="RYNTARA walkthrough">Walkthrough <span aria-hidden="true">↗</span></a>
-            </div>
+        <section class="work-group" aria-labelledby="ai-title">
+          <h3 class="work-group-title" id="ai-title">Applied AI</h3>
+          <div class="ai-cases">
+            <article class="ai-case" aria-labelledby="robode-ai-title" data-scroll-stage>
+              <div class="case-copy" data-flow>
+                <p class="eyebrow">RoboDE</p>
+                <h4 id="robode-ai-title">From instruction to task plan</h4>
+                <p>A planner model breaks an instruction into robot tasks. RoboDE converts those tasks into commands and validates the plan before execution in Isaac Sim.</p>
+                <div class="project-links">
+                  <a class="text-link" href="https://github.com/Theboss12k/RoboDE" aria-label="RoboDE source code">Source <span aria-hidden="true">↗</span></a>
+                  <a class="text-link" href="https://theboss12k.github.io/RoboDE/#pipeline" aria-label="RoboDE planning walkthrough">Walkthrough <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+              <figure class="demo" data-flow="detail">
+                <div class="player"><video controls muted playsinline preload="none" poster="media/robode-plan.jpg" aria-label="RoboDE generates a structured task plan"><source src="media/robode-plan.mp4" type="video/mp4"></video></div>
+                <figcaption>A generated plan breaks a single instruction into nine tasks.</figcaption>
+              </figure>
+            </article>
+            <article class="ai-case" aria-labelledby="ryntara-ai-title" data-scroll-stage>
+              <div class="case-copy" data-flow>
+                <p class="eyebrow">RYNTARA</p>
+                <h4 id="ryntara-ai-title">From raw packets to fleet data</h4>
+                <p>A local Ollama model can draft a Python telemetry adapter. Adapter Studio runs the parser on UDP packets and checks each parsed line against the shared fleet schema.</p>
+                <div class="project-links">
+                  <a class="text-link" href="https://github.com/Theboss12k/RYNTARA" aria-label="RYNTARA source code">Source <span aria-hidden="true">↗</span></a>
+                  <a class="text-link" href="https://theboss12k.github.io/RYNTARA/#operate" aria-label="RYNTARA Adapter Studio walkthrough">Walkthrough <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+              <figure class="demo" data-flow="detail">
+                <div class="player"><video controls muted playsinline preload="none" poster="media/ryntara-adapter.jpg" aria-label="RYNTARA captures UDP packets and validates parsed telemetry"><source src="media/ryntara-adapter.mp4" type="video/mp4"></video></div>
+                <figcaption>Adapter Studio captures packets and validates the parsed telemetry.</figcaption>
+              </figure>
+            </article>
           </div>
-          <figure class="demo" data-flow="detail">
-            <div class="player"><video controls muted playsinline preload="none" poster="media/ryntara.jpg" aria-label="RYNTARA route planner demo"><source src="media/ryntara.mp4" type="video/mp4"></video></div>
-            <figcaption>The planner flags a route through a restricted area and proposes an alternate path.</figcaption>
-          </figure>
-        </article>
+        </section>
 
-        <article class="project" aria-labelledby="robode-title" data-scroll-stage>
-          <div class="project-copy" data-flow>
-            <p class="eyebrow">02 / Robotics workspace</p>
-            <h3 id="robode-title">RoboDE</h3>
-            <p>A robotics IDE for configuring robots, building scenes, and running task plans. The demo follows a plan as it runs in Isaac Sim.</p>
-            <div class="project-links">
-              <a class="text-link" href="https://github.com/Theboss12k/RoboDE" aria-label="RoboDE source code">Source <span aria-hidden="true">↗</span></a>
-              <a class="text-link" href="https://theboss12k.github.io/RoboDE/" aria-label="RoboDE walkthrough">Walkthrough <span aria-hidden="true">↗</span></a>
+        <section class="work-group" aria-labelledby="robotics-title">
+          <h3 class="work-group-title" id="robotics-title">Robotics &amp; autonomy</h3>
+          <article class="project" aria-labelledby="ryntara-title" data-scroll-stage>
+            <div class="project-copy" data-flow>
+              <p class="eyebrow">01 / Fleet coordination</p>
+              <h4 id="ryntara-title">RYNTARA</h4>
+              <p>One map for drone and rover telemetry. Operators can check proposed routes against restricted areas and other traffic before approving them.</p>
+              <div class="project-links">
+                <a class="text-link" href="https://github.com/Theboss12k/RYNTARA" aria-label="RYNTARA source code">Source <span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="https://theboss12k.github.io/RYNTARA/" aria-label="RYNTARA walkthrough">Walkthrough <span aria-hidden="true">↗</span></a>
+              </div>
             </div>
-          </div>
-          <figure class="demo" data-flow="detail">
-            <div class="player"><video controls muted playsinline preload="none" poster="media/robode.jpg" aria-label="RoboDE task execution demo"><source src="media/robode.mp4" type="video/mp4"></video></div>
-            <figcaption>RoboDE shows execution feedback as a task plan runs in Isaac Sim.</figcaption>
-          </figure>
-        </article>
+            <figure class="demo" data-flow="detail">
+              <div class="player"><video controls muted playsinline preload="none" poster="media/ryntara.jpg" aria-label="RYNTARA route planner demo"><source src="media/ryntara.mp4" type="video/mp4"></video></div>
+              <figcaption>The planner flags a route through a restricted area and proposes an alternate path.</figcaption>
+            </figure>
+          </article>
 
-        <article class="project" aria-labelledby="phase-title" data-scroll-stage>
-          <div class="project-copy" data-flow>
-            <p class="eyebrow">03 / Multi-agent research</p>
-            <h3 id="phase-title">PHASE</h3>
-            <p>Physics-based Hierarchical Adaptive Spatial Evasion studies how multiple vehicles can coordinate their paths. It combines local A* planning with conflict detection and priority-weighted evasion.</p>
-            <div class="project-links">
-              <a class="text-link" href="https://github.com/Theboss12k/Autonomous_Algorithms" aria-label="PHASE source code">Source <span aria-hidden="true">↗</span></a>
-              <a class="text-link" href="https://theboss12k.github.io/RYNTARA/#phase" aria-label="PHASE research walkthrough">Walkthrough <span aria-hidden="true">↗</span></a>
+          <article class="project" aria-labelledby="robode-title" data-scroll-stage>
+            <div class="project-copy" data-flow>
+              <p class="eyebrow">02 / Robotics workspace</p>
+              <h4 id="robode-title">RoboDE</h4>
+              <p>A robotics IDE for configuring robots, building scenes, and running task plans. The demo follows a plan as it runs in Isaac Sim.</p>
+              <div class="project-links">
+                <a class="text-link" href="https://github.com/Theboss12k/RoboDE" aria-label="RoboDE source code">Source <span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="https://theboss12k.github.io/RoboDE/" aria-label="RoboDE walkthrough">Walkthrough <span aria-hidden="true">↗</span></a>
+              </div>
             </div>
-          </div>
-          <figure class="demo" data-flow="detail">
-            <div class="player"><video controls muted playsinline preload="none" poster="media/phase.jpg" aria-label="PHASE multi-agent simulation demo"><source src="media/phase.mp4" type="video/mp4"></video></div>
-            <figcaption>Nineteen simulated vehicles navigate around five obstacles toward their own goals.</figcaption>
-          </figure>
-        </article>
+            <figure class="demo" data-flow="detail">
+              <div class="player"><video controls muted playsinline preload="none" poster="media/robode.jpg" aria-label="RoboDE task execution demo"><source src="media/robode.mp4" type="video/mp4"></video></div>
+              <figcaption>RoboDE shows execution feedback as a task plan runs in Isaac Sim.</figcaption>
+            </figure>
+          </article>
+
+          <article class="project" aria-labelledby="phase-title" data-scroll-stage>
+            <div class="project-copy" data-flow>
+              <p class="eyebrow">03 / Trajectory-planning research</p>
+              <h4 id="phase-title">PHASE</h4>
+              <p>Physics-based Hierarchical Adaptive Spatial Evasion studies how multiple vehicles can coordinate their paths. It combines local A* planning with conflict detection and priority-weighted evasion.</p>
+              <div class="project-links">
+                <a class="text-link" href="https://github.com/Theboss12k/Autonomous_Algorithms" aria-label="PHASE source code">Source <span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="https://theboss12k.github.io/RYNTARA/#phase" aria-label="PHASE research walkthrough">Walkthrough <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+            <figure class="demo" data-flow="detail">
+              <div class="player"><video controls muted playsinline preload="none" poster="media/phase.jpg" aria-label="PHASE multi-agent simulation demo"><source src="media/phase.mp4" type="video/mp4"></video></div>
+              <figcaption>Nineteen simulated vehicles navigate around five obstacles toward their own goals.</figcaption>
+            </figure>
+          </article>
+        </section>
       </div>
     </section>
 
@@ -182,10 +229,12 @@
         <div class="about-details" data-flow>
           <section class="employer" aria-labelledby="employer-title">
             <img class="employer-logo" src="images/ge-vernova.svg" alt="GE Vernova" width="227" height="50" loading="lazy">
-            <h3 id="employer-title">Parts Data Analyst</h3>
-            <p class="employer-dates">GE Vernova · July 2025–present</p>
-            <p>I work on data, software, and automation for engineering and business processes. I joined GE Vernova as an EEDP intern in January 2025.</p>
-            <p>GE Vernova is a global energy company with businesses in power, wind, and electrification.</p>
+            <h3 id="employer-title">Career at GE Vernova</h3>
+            <ol class="employer-timeline">
+              <li><strong>EEDP Intern</strong><span><time datetime="2025-01">January 2025</time></span></li>
+              <li><strong>Parts Data Analyst</strong><span><time datetime="2025-07">July 2025</time>–present</span></li>
+            </ol>
+            <p>I work with engineering data, software, and automation to support engineering and business processes.</p>
             <a class="text-link" href="https://www.gevernova.com/company/about">About GE Vernova <span aria-hidden="true">↗</span></a>
           </section>
 
@@ -202,7 +251,7 @@
         <div data-flow>
           <p class="eyebrow section-index">04 / Contact</p>
           <h2 id="contact-title">Let’s connect.</h2>
-          <p>I’d be glad to talk about robotics, autonomy, or engineering tools.</p>
+          <p>I’d be glad to talk about applied AI, robotics, or engineering tools.</p>
           <a class="text-link contact-email" href="mailto:parameshsriram2020@gmail.com">parameshsriram2020@gmail.com</a>
           <div class="actions"><a class="button" href="https://www.linkedin.com/in/paramesh-sriram-17121a230/">LinkedIn <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/Theboss12k">GitHub <span aria-hidden="true">↗</span></a></div>
         </div>
