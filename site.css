@@ -92,13 +92,23 @@ details[open] .disclosure { transform: translateY(3px) rotate(225deg); }
 
 .applied-ai { background: #edf1fb; }
 .ai-layout, .ai-evidence { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); align-items: start; gap: clamp(24px, 6vw, 92px); }
+.ai-workflow-note { max-width: 57ch; margin-top: 22px; padding-left: 15px; border-left: 2px solid #bcc8e9; }
+.ai-workflow-note h3, .ai-method h4, .ai-benchmark h4 { font-size: 1.08rem; line-height: 1.3; }
+.ai-workflow-note p { margin-top: 6px; color: var(--muted); }
 .ai-evidence { margin-top: clamp(34px, 6vw, 72px); padding-top: clamp(28px, 4vw, 54px); border-top: 1px solid #cbd5eb; }
 .ai-evidence h3 { margin-top: 6px; font-size: clamp(1.35rem, 3vw, 2rem); line-height: 1.2; letter-spacing: -.035em; }
-.model-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; padding: 0; list-style: none; }
+.ai-method { display: grid; gap: 22px; }
+.ai-method h3 + p { margin-top: 10px; color: var(--muted); }
+.model-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 0; padding: 0; list-style: none; }
 .model-list li { padding: 5px 10px; border: 1px solid #cbd5eb; border-radius: 4px; background: var(--sheet); font: .8rem/1.45 var(--mono); }
+.ai-benchmarks { display: grid; gap: 14px; }
 .ai-benchmark { padding: clamp(14px, 2.8vw, 28px); border: 1px solid #cbd5eb; border-radius: 6px; background: var(--sheet); }
-.ai-benchmark h3 + p { margin-top: 10px; color: var(--muted); }
-.ai-benchmark .text-link { margin-top: 6px; }
+.ai-benchmark h4 { margin-top: 6px; }
+.benchmark-score { margin-block: 8px; color: var(--blue); font-size: clamp(1.55rem, 3.4vw, 2.4rem); font-weight: 700; line-height: 1.13; letter-spacing: -.045em; }
+.benchmark-score span { color: var(--muted); }
+.benchmark-score + p, .benchmark-scope { color: var(--muted); }
+.benchmark-scope { margin-top: 8px; font-size: .86rem; }
+.ai-benchmark .text-link { margin-top: 4px; }
 
 .work { color-scheme: dark; background: var(--night); color: #faf9f5; }
 .work .eyebrow { color: #b5c8ff; }

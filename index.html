@@ -126,11 +126,15 @@
             <p class="eyebrow section-index">02 / Enterprise experience</p>
             <h2 id="ai-title">Applied AI</h2>
             <p>I designed and deployed an LLM workflow at GE Vernova that cut the cycle time of an internal document process from <strong>over 40 hours to under 4 hours</strong>. The workflow combined hybrid retrieval with automated processing across large document collections.</p>
+            <div class="ai-workflow-note">
+              <h3>Making the workflow reliable</h3>
+              <p>I added automatic recovery so interrupted jobs could resume, tracked token usage to inform model selection, and automated document formatting so outputs were ready for the next step.</p>
+            </div>
           </div>
           <div class="principles ai-topics" role="group" aria-label="Explore applied AI methods" data-flow="detail">
             <details name="ai-topics" open>
               <summary><span class="principle-index" aria-hidden="true">01</span><span>LLMs</span><span class="disclosure" aria-hidden="true"></span></summary>
-              <div class="principle-copy"><p>I used large language models to process retrieved document content, then automated the formatting of the results and tracked input and output token usage.</p></div>
+              <div class="principle-copy"><p>I built workflows where large language models processed retrieved passages. The workflow could retrieve more context as it went, which helped it handle tasks across large document collections.</p></div>
             </details>
             <details name="ai-topics">
               <summary><span class="principle-index" aria-hidden="true">02</span><span>Hybrid RAG</span><span class="disclosure" aria-hidden="true"></span></summary>
@@ -142,30 +146,51 @@
             </details>
             <details name="ai-topics">
               <summary><span class="principle-index" aria-hidden="true">04</span><span>Evaluation</span><span class="disclosure" aria-hidden="true"></span></summary>
-              <div class="principle-copy"><p>I compared whether models completed the task, returned valid outputs, and rejected invalid requests. I also tracked latency and weighed token usage, cost, and compute needs when selecting models.</p></div>
+              <div class="principle-copy"><p>For document processing, I evaluated language models and embedding models together. I weighed extraction quality and retrieval quality alongside token use, cost, and compute needs.</p></div>
             </details>
           </div>
         </div>
 
-        <div class="ai-evidence" data-scroll-stage>
-          <div data-flow>
-            <p class="eyebrow">Model evaluation</p>
-            <h3>Models I’ve evaluated</h3>
-            <ul class="model-list" role="list">
-              <li>gpt-oss</li>
-              <li>Claude</li>
-              <li>Llama 3.1</li>
-              <li>NVIDIA Nemotron</li>
-              <li>Phi-4</li>
-            </ul>
+        <section class="ai-evidence" aria-labelledby="ai-evaluation-title">
+          <div class="ai-method" data-scroll-stage>
+            <div data-flow>
+              <p class="eyebrow">Evaluation practice</p>
+              <h3 id="ai-evaluation-title">How I evaluate models</h3>
+              <p>In RoboDE, I check whether the planner produces valid tasks, the converter binds them to supported commands, and the simulated result matches the instruction. The suite also tests whether ambiguous requests prompt a clarification and impossible requests are blocked. I track latency and formatting repairs alongside pass counts.</p>
+            </div>
+            <div data-flow="detail">
+              <h4>Models I’ve evaluated</h4>
+              <ul class="model-list" role="list">
+                <li>gpt-oss</li>
+                <li>Claude Opus 5.5</li>
+                <li>Llama 3.1</li>
+                <li>NVIDIA Nemotron</li>
+                <li>Phi-4</li>
+              </ul>
+            </div>
           </div>
-          <div class="ai-benchmark" data-flow="detail">
-            <p class="eyebrow">Published benchmark · Nemotron</p>
-            <h3>9 of 12 cases passed</h3>
-            <p>Nemotron 3.5 Bolt had the highest pass count among four configurations tested on the same 12 cases. All four failed the adapter generation tests.</p>
-            <a class="text-link" href="https://theboss12k.github.io/RoboDE/#checks">See the evaluation results <span aria-hidden="true">↗</span></a>
+          <div class="ai-benchmarks">
+            <article class="ai-benchmark" data-scroll-stage>
+              <div data-flow>
+                <p class="eyebrow">Planner and converter · November 2026</p>
+                <h4>Claude Opus 5.5</h4>
+                <p class="benchmark-score">13 of 15 <span>→</span> 15 of 15</p>
+                <p>Two failures exposed gaps in the planner instructions. I clarified which verification tasks the command catalog supports and gave the planner an explicit carry height. The two-robot and pick-and-place cases passed on the rerun.</p>
+                <p class="benchmark-scope">One run per case in each round, using RoboDE’s mock simulator.</p>
+                <a class="text-link" href="https://github.com/Theboss12k/RoboDE/blob/0c04a3a943595bb51ad0ac140a5b745231059b16/docs/EVAL_RESULTS_20261106.md#planner-instruction-fixes">Read the Claude evaluation <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+            <article class="ai-benchmark" data-scroll-stage>
+              <div data-flow>
+                <p class="eyebrow">Model selection · October 2026</p>
+                <h4>NVIDIA Nemotron</h4>
+                <p class="benchmark-score">9 of 12 cases passed</p>
+                <p>Nemotron 3.5 Bolt had the highest pass count among four configurations in this earlier suite. All four rejected unreachable poses, unknown actuators, and joint-limit violations. All four failed the adapter generation tests.</p>
+                <a class="text-link" href="https://theboss12k.github.io/RoboDE/#checks">See the Nemotron results <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
           </div>
-        </div>
+        </section>
       </div>
     </section>
 
